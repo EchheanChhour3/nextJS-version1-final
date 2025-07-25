@@ -7,6 +7,7 @@ import { FooterComponent } from "@/components/(landing)/nav/FooterComponent";
 import React from "react";
 
 import { NavbarComponent } from "@/components/(landing)/nav/NavbarComponent";
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 export const metadata: Metadata = {
   // title: "Car Selling",
@@ -59,15 +60,16 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${kantumruy_font.variable} ${lexend_font.variable}`}>
-      <body
-      >
-        <NavbarComponent/>
-        
+    <html
+      lang="en"
+      className={`${kantumruy_font.variable} ${lexend_font.variable}`}>
+      <body>
+        <NavbarComponent />
+        <GoogleAnalytics gaId={"G-0LW4L89Y5J"} />
         {children}
         {modal}
         {/* <h1 lang="km">សួស្តី</h1> */}
-        <FooterComponent/>
+        <FooterComponent />
       </body>
     </html>
   );
